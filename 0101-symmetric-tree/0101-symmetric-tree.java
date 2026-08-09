@@ -20,16 +20,9 @@ class Solution {
         return isSymmetricHelp(root.left,root.right);
     }
      public boolean isSymmetricHelp(TreeNode p,TreeNode q){
-        // if(p.val!=q.val) return false;
         if(p==null&&q==null) return true;
         if(p==null||q==null) return false;
-        // if(p.left==null&&q.right==null){
-        //     // if(p.val!=q.val) return false;
-        //     return true;
-        // }
-        // if(p.left==null||q.right==null)
-        // return false;
-         if(p.val!=q.val) return false;
+        if(p.val!=q.val) return false;
         return isSymmetricHelp(p.left,q.right)&&isSymmetricHelp(p.right,q.left);
      }
 }
